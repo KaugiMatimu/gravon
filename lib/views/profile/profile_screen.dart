@@ -18,6 +18,7 @@ import 'notification_settings_screen.dart';
 import 'notifications_screen.dart';
 import 'security_screen.dart';
 import '../../services/notification_service.dart';
+import '../home/about_us_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -297,6 +298,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       } catch (_) {}
                     }
                   },
+                ),
+                _buildMenuItem(
+                  context,
+                  icon: Icons.info_outline_rounded,
+                  title: 'About Us',
+                  subtitle: 'Learn more about GRAVON',
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const AboutUsScreen()),
+                  ),
                 ),
                 const SizedBox(height: 16),
                 _buildMenuSection('Settings'),

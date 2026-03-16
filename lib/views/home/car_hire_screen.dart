@@ -193,18 +193,21 @@ class _CarHireScreenState extends State<CarHireScreen> {
           if (car.imageUrls.isNotEmpty)
             ClipRRect(
               borderRadius: const BorderRadius.vertical(top: Radius.circular(15)),
-              child: Image.network(
-                car.imageUrls[0],
+              child: Container(
                 height: 200,
                 width: double.infinity,
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) {
-                  return Container(
-                    height: 200,
-                    color: Colors.grey.shade200,
-                    child: const Icon(Icons.directions_car, size: 64, color: Colors.grey),
-                  );
-                },
+                color: Colors.grey.shade100,
+                child: Image.network(
+                  car.imageUrls[0],
+                  fit: BoxFit.contain,
+                  errorBuilder: (context, error, stackTrace) {
+                    return Container(
+                      height: 200,
+                      color: Colors.grey.shade200,
+                      child: const Icon(Icons.directions_car, size: 64, color: Colors.grey),
+                    );
+                  },
+                ),
               ),
             )
           else
