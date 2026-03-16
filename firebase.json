@@ -1,0 +1,25 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "gravo-5515a",
+          "appId": "1:1049937932317:android:ac56624b2d70430dfd16f4",
+          "fileOutput": "android/app/google-services.json"
+        }
+      }
+    },
+    "dart": {
+      "lib/firebase_options.dart": {
+        "projectId": "gravo-5515a",
+        "configurations": {
+          "android": "1:1049937932317:android:ac56624b2d70430dfd16f4",
+          "web": "1:1049937932317:web:1520979cb735e8eefd16f4"
+        }
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  }
+}}
