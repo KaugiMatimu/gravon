@@ -21,6 +21,7 @@ import '../../models/location_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../widgets/user_avatar_menu.dart';
+import 'about_us_screen.dart';
 // Removed unused firebase_core import
 
 import 'package:url_launcher/url_launcher.dart';
@@ -213,6 +214,26 @@ class _LandingPageViewState extends State<LandingPageView> {
                         },
                         child: Text(
                           'Car Hire',
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 20),
+                      const SizedBox(width: 20),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const AboutUsScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'About Us',
                           style: GoogleFonts.montserrat(
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
